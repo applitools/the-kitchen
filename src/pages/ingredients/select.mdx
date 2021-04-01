@@ -1,0 +1,63 @@
+---
+title: Select
+layout: ingredient
+---
+
+import { FormLabel } from "@chakra-ui/react"
+import Form from '@components/Form';
+import FormRow from '@components/FormRow';
+import Select from '@ingredients/Select';
+
+<Form>
+
+<FormRow id="spices-select-single">
+
+<FormLabel fontWeight="bold">Single Select</FormLabel>
+
+<Select name="spices-select-single" options={[
+  {
+    value: 'chili-powder',
+    label: 'Chili Powder'
+  },
+  {
+    value: 'garlic',
+    label: 'Garlic'
+  },
+  {
+    value: 'ginger',
+    label: 'Ginger'
+  },
+  {
+    value: 'paprika',
+    label: 'Paprika'
+  }
+]} />
+
+</FormRow>
+
+<FormRow id="spices-select-multi">
+
+<FormLabel fontWeight="bold">Multi Select</FormLabel>
+
+<Select name="spices-select-multi" options={[
+  {
+    value: 'chili-powder',
+    label: 'Chili Powder'
+  },
+  {
+    value: 'garlic',
+    label: 'Garlic'
+  },
+  {
+    value: 'ginger',
+    label: 'Ginger'
+  },
+  {
+    value: 'paprika',
+    label: 'Paprika'
+  }
+]} multiple />
+
+</FormRow>
+
+</Form>

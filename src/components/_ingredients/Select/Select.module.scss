@@ -1,0 +1,26 @@
+@import "@styles/settings/__settings";
+
+.select {
+
+ select {
+
+  &[multiple] {
+    
+    height: auto;
+    padding: 1em;
+
+    & + div {
+      display: none;
+    }
+
+  }
+
+ }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: .5em;
+  }
+
+}

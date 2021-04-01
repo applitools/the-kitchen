@@ -1,0 +1,17 @@
+.footerText {
+
+  &,
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+.footerLogo {
+  width: auto;
+  height: 1.4em;
+  margin-left: .5em;
+  transform: translateY(2px);
+}

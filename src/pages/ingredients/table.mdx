@@ -1,0 +1,32 @@
+---
+title: Table
+layout: ingredient
+---
+
+import Table from '@ingredients/Table';
+
+<Table
+  id="fruits-vegetables"
+  columns={[
+    {
+      id: 'name',
+      Label: 'Name'
+    },
+    {
+      id: 'type',
+      Label: 'Type'
+    },
+    {
+      id: 'flavor',
+      Label: 'Flavor'
+    },
+  ]}
+  data={[
+    ['Apple', 'Fruit', 'Sweet'],
+    ['Lemon', 'Fruit', 'Bitter'],
+    ['Onion', 'Vegetable', 'Bitter'],
+    ['Pepper', 'Vegetable', 'Sweet'],
+    ['Carrots', 'Vegetable', 'Sweet'],
+    ['Banana', 'Fruit', 'Sweet']
+  ]}
+/>

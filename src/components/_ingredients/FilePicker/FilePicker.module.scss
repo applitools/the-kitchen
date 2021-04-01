@@ -1,0 +1,50 @@
+@import "@styles/settings/__settings";
+
+.filePicker {
+
+  input {
+    
+    height: auto;
+    padding: 1rem;
+
+    &::-webkit-file-upload-button {
+      margin-right: 1rem;
+    }
+
+    // Chaining the below selector to the above prevents
+    // it from working
+
+    &::file-selector-button {
+      margin-right: 1rem;
+    }
+
+  }
+
+}
+
+.filePickerAccepted {
+  font-size: .9rem;
+  margin-top: .5rem;
+}
+
+.filePickerPreview {
+
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: solid 1px;
+  border-color: inherit;
+  border-radius: 0.375rem;
+  margin-top: 1em;
+
+  figcaption {
+    order: 1;
+    margin-bottom: .5em;
+    margin-top: -.5em;
+  }
+
+  img {
+    order: 2;
+  }
+
+}

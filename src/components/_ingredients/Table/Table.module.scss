@@ -1,0 +1,54 @@
+@import "@styles/settings/__settings";
+
+.table {
+
+  table {
+    width: 100%;
+  }
+
+  thead {
+
+    tr {
+      color: white;
+      background-color: $color-gray-500;
+    }
+
+    button {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      font-weight: inherit;
+      background: none;
+    }
+
+  }
+
+  tbody {
+
+    tr {
+      border-bottom: solid 1px $color-gray-100;
+    }
+
+  }
+
+  th,
+  td {
+
+    text-align: left;
+    padding: .5em;
+    border-right: solid 1px white;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+  }
+
+}
+
+.tableNote {
+  color: $color-gray-600;
+  font-size: .9em;
+  font-style: italic;
+  margin-bottom: 1em;
+}

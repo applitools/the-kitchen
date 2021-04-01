@@ -1,0 +1,21 @@
+---
+title: File Picker
+layout: ingredient
+---
+
+import { FormLabel, Button } from "@chakra-ui/react"
+import Form from '@components/Form';
+import FormRow from '@components/FormRow';
+import FilePicker from '@ingredients/FilePicker';
+
+<Form>
+
+<FormRow id="photo-upload">
+
+<FormLabel fontWeight="bold">Upload Recipe Picture</FormLabel>
+
+<FilePicker name="photo-upload" accept="image/png, image/jpeg" />
+
+</FormRow>
+
+</Form>
