@@ -18,7 +18,7 @@ const Nav = () => {
               </Link>
             </Text>
             <Text color="gray.600" fontSize="2xl">
-              <a href="https://github.com/colbyfayock/the-kitchen">
+              <a href="https://github.com/applitools/the-kitchen">
                 <FaGithub />
               </a>
             </Text>
