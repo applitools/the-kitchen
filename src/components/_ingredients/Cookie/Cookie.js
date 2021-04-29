@@ -33,9 +33,9 @@ const Cookie = ({ id, label, name, defaultValue }) => {
       <Heading as="h2" fontSize={22} marginBottom={5}>{ label }</Heading>
 
       <Form>
-        <Flex>
-          <FormRow id="set-cookie" p={4}>
-            <Heading as="h2" fontSize={18} marginBottom={5}>Manage Cookie</Heading>
+        <Flex align="flex-start">
+          <FormRow id="set-cookie">
+            <Heading as="h3" fontSize={16} marginBottom={5}>Manage Cookie</Heading>
             <Stack spacing={3}>
               <p>
                 <Stack spacing={3}>
@@ -56,7 +56,7 @@ const Cookie = ({ id, label, name, defaultValue }) => {
             </Stack>
           </FormRow>
           <Box width={500} marginLeft={10}>
-            <Heading as="h2" fontSize={18} marginBottom={5}>Cookie Value</Heading>
+            <Heading as="h3" fontSize={16} marginBottom={5}>Cookie Value</Heading>
             <p id={`${id}-cookie-name`}>
               Name: { name }
             </p>
