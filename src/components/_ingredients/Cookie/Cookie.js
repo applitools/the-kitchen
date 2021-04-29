@@ -57,11 +57,11 @@ const Cookie = ({ id, label, name, defaultValue }) => {
           </FormRow>
           <Box width={500} marginLeft={10}>
             <Heading as="h3" fontSize={16} marginBottom={5}>Cookie Value</Heading>
-            <p id={`${id}-cookie-name`}>
-              Name: { name }
+            <p>
+              Name: <span id={`${id}-cookie-name`}>{ name }</span>
             </p>
-            <p id={`${id}-cookie-value`}>
-              Value: { cookies[name] }
+            <p>
+              Value: <span id={`${id}-cookie-value`}>{ cookies[name] }</span>
             </p>
           </Box>
         </Flex>
