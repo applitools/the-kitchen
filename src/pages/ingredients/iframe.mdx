@@ -3,7 +3,10 @@ title: iFrame
 layout: ingredient
 ---
 
+import { Heading } from "@chakra-ui/react"
 import Iframe from '@ingredients/Iframe';
+
+<Heading as="h2" fontSize={20} marginBottom={4}>Same Site</Heading>
 
 <Iframe
   id="the-kitchen-table"
@@ -11,4 +14,14 @@ import Iframe from '@ingredients/Iframe';
   width="800"
   height="800"
   src="/ingredients/table"
+/>
+
+<Heading as="h2" fontSize={20} marginBottom={4}>Cross Domain</Heading>
+
+<Iframe
+  id="youtube-table-cypress"
+  title="YouTube - Verifying Sortable Tables with Cypress"
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/6zLWDHnN790"
 />
