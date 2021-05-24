@@ -61,6 +61,9 @@ const Canvas = ({ backgroundColor, headlineFontColor, buttonBackgroundColor, but
   function handleOnCanvasClick(e) {
     const canvas = canvasRef?.current;
 
+    const canvasWidthCurrent = canvas.offsetWidth;
+    const multiplier = canvasWidthCurrent / canvasWidth;
+
     const mousePosition = getElementMousePosition({
       element: canvas,
       clientX: e.clientX,
@@ -68,10 +71,10 @@ const Canvas = ({ backgroundColor, headlineFontColor, buttonBackgroundColor, but
     });
     
     const isButtonClick = isPositionInsideArea(mousePosition, {
-      x: buttonX,
-      y: buttonY,
-      width: buttonWidth,
-      heigth: buttonHeight
+      x: buttonX * multiplier,
+      y: buttonY * multiplier,
+      width: buttonWidth * multiplier,
+      heigth: buttonHeight * multiplier
     })
 
     if ( isButtonClick ) {
