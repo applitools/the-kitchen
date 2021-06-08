@@ -16,7 +16,7 @@ import Card from '@components/Card';
             { data.map(({ id, title, image }) => {
               return (
                 <li key={id}>
-                  <Card w="100%">
+                  <Card>
                     <Flex>
                       <Image w={100} h={100} mr={5} src={image} />
                       <Heading as="h4" size="md">{ title }</Heading>

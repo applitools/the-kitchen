@@ -18,8 +18,8 @@ const API = ({ children, id, url }) => {
   return (
     <div id={id} className={styles.api}>
       <div className={styles.apiResponse}>
-        <Code px="4" mt="4"><pre>{ JSON.stringify(response, null, 2) }</pre></Code>
-        <Box as="p" mt="4">
+        <Code w="100%" px="4" mt="4"><pre>{ JSON.stringify(response, null, 2) }</pre></Code>
+        <Box as="p" p="4">
           <Button id={`${id}-button`} colorScheme="blue" onClick={() => getApi()}>
             Refresh
           </Button>
