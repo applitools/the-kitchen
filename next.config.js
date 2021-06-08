@@ -10,4 +10,6 @@ module.exports = composePlugins([
     defaultLayout: true,
     fileExtensions: ['mdx']
   })
-]);
+], {
+  target: 'serverless'
+});
