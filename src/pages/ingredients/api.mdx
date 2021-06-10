@@ -7,12 +7,12 @@ import { List, Flex, Spacer, Image, Heading } from "@chakra-ui/react"
 import API from '@ingredients/API';
 import Card from '@components/Card';
 
-<API url="/api/recipes">
+<API id="recipes" url="/api/recipes">
   {({ data } = {}) => {
     return (
       <div>
         {data && (
-          <List>
+          <List id="recipes-list">
             { data.map(({ id, title, image }) => {
               return (
                 <li key={id}>
