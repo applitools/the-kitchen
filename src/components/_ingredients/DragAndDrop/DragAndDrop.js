@@ -71,10 +71,10 @@ const DragAndDrop = ({ menuItems }) => {
           <Heading as="h2" fontSize={22} marginBottom={5}>Order Ticket</Heading>
           <ul id="plate-items" onDragOver={allowDrop} onDrop={drop}>
             {hasItems && Object.keys(items).map(key => {
-              const item = items[key];
+              const { id, name } = items[key];
               return (
-                <li key={item.id} id={`plate-${id}`} draggable>
-                  { item.name }
+                <li key={id} id={`plate-${id}`} draggable>
+                  { name }
                 </li>
               )
             })}
