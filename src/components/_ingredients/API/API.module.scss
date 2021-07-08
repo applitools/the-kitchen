@@ -1,0 +1,22 @@
+.api {
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 940px) {
+    flex-direction: row;
+  }
+
+}
+
+.apiResponse {
+
+  font-size: .8em;
+  margin-right: 1em;
+  order: 2;
+
+  @media (min-width: 940px) {
+    order: 0;
+  }
+
+}

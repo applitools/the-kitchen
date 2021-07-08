@@ -1,0 +1,33 @@
+---
+title: API
+layout: ingredient
+---
+
+import { List, Flex, Spacer, Image, Heading } from "@chakra-ui/react"
+import API from '@ingredients/API';
+import Card from '@components/Card';
+
+<API id="recipes" url="/api/recipes">
+  {({ data } = {}) => {
+    return (
+      <div>
+        {data && (
+          <List id="recipes-list">
+            { data.map(({ id, title, image }) => {
+              return (
+                <li key={id}>
+                  <Card>
+                    <Flex>
+                      <Image w={100} h={100} mr={5} src={image} />
+                      <Heading as="h4" size="md">{ title }</Heading>
+                    </Flex>
+                  </Card>
+                </li>
+              )
+            })}
+          </List>
+        )}
+      </div>
+    )
+  }}
+</API>
