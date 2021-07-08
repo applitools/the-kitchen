@@ -1,0 +1,54 @@
+@import "@styles/settings/__settings";
+
+.food {
+  display: flex;
+  margin: 0 -1em;
+}
+
+.menu,
+.plate {
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 50%;
+  margin: 0 1em;
+
+  &[data-has-items="true"] {
+    
+    ul {
+      border: solid 5px $color-primary;
+    }
+
+  }
+
+  &[data-has-items="false"] {
+    
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+  }
+
+  ul {
+    flex-grow: 1;
+    list-style: none;
+    padding: 0;
+    border: solid 5px $color-gray-200;
+    padding: 1em;
+    margin: 0;
+  }
+
+  li {
+    padding: .8em 1em;
+  }
+
+}
+
+.actions {
+  margin-top: 2em;
+}
