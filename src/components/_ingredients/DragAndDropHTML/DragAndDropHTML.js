@@ -3,7 +3,7 @@ import { Heading, Button } from '@chakra-ui/react';
 
 import styles from './DragAndDropHTML.module.scss';
 
-const DragAndDropHTML = ({ menuItems }) => {
+const DragAndDropHTML = ({ menuItems, ...rest }) => {
 
   const [items, setItems] = useState({});
   const hasItems = Object.keys(items).length > 0;
@@ -52,7 +52,7 @@ const DragAndDropHTML = ({ menuItems }) => {
   }
 
   return (
-    <div className={styles.draganddrop}>
+    <div className={styles.draganddrop} {...rest}>
       <div className={styles.food}>
         <div id="menu" className={styles.menu}>
           <Heading as="h3" fontSize={18} marginBottom={5}>Menu</Heading>

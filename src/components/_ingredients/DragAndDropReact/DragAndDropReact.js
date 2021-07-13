@@ -4,7 +4,7 @@ import { Heading, Button } from '@chakra-ui/react';
 
 import styles from './DragAndDropReact.module.scss';
 
-const DragAndDropReact = ({ menuItems: defaultMenuItems }) => {
+const DragAndDropReact = ({ menuItems: defaultMenuItems, ...rest }) => {
 
   const [menuItems, updateMenuItems] = useState(defaultMenuItems);
 
@@ -33,7 +33,7 @@ const DragAndDropReact = ({ menuItems: defaultMenuItems }) => {
   resetServerContext();
 
   return (
-    <div className={styles.draganddrop}>
+    <div className={styles.draganddrop} {...rest}>
       <Heading as="h3" fontSize={18} marginBottom={5}>Favorite Sides</Heading>
       <DragDropContext onDragEnd={handleOnDragEnd}>
         <Droppable droppableId="menuItems">
@@ -43,7 +43,7 @@ const DragAndDropReact = ({ menuItems: defaultMenuItems }) => {
                 return (
                   <Draggable key={id} draggableId={id} index={index}>
                     {(provided) => (
-                      <li ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+                      <li id={`sides-${id}`} ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                         { name }
                       </li>
                     )}
