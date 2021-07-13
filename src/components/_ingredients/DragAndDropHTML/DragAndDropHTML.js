@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Heading, Button } from '@chakra-ui/react';
 
-import styles from './DragAndDrop.module.scss';
+import styles from './DragAndDropHTML.module.scss';
 
-const DragAndDrop = ({ menuItems }) => {
+const DragAndDropHTML = ({ menuItems }) => {
 
   const [items, setItems] = useState({});
   const hasItems = Object.keys(items).length > 0;
@@ -55,7 +55,7 @@ const DragAndDrop = ({ menuItems }) => {
     <div className={styles.draganddrop}>
       <div className={styles.food}>
         <div id="menu" className={styles.menu}>
-          <Heading as="h2" fontSize={22} marginBottom={5}>Menu</Heading>
+          <Heading as="h3" fontSize={18} marginBottom={5}>Menu</Heading>
           <ul id="menu-items" onDragOver={allowDrop} onDragStart={drag}>
             {menuItems.map(({ id, name }) => {
               return (
@@ -68,7 +68,7 @@ const DragAndDrop = ({ menuItems }) => {
         </div>
 
         <div id="plate" className={styles.plate} data-has-items={hasItems}>
-          <Heading as="h2" fontSize={22} marginBottom={5}>Order Ticket</Heading>
+          <Heading as="h3" fontSize={18} marginBottom={5}>Order Ticket</Heading>
           <ul id="plate-items" onDragOver={allowDrop} onDrop={drop}>
             {hasItems && Object.keys(items).map(key => {
               const { id, name } = items[key];
@@ -93,4 +93,4 @@ const DragAndDrop = ({ menuItems }) => {
   )
 }
 
-export default DragAndDrop;
+export default DragAndDropHTML;

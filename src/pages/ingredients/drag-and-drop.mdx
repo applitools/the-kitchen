@@ -1,12 +1,17 @@
 ---
-title: Drag and Drop
+title: Drag & Drop
 layout: ingredient
 ---
 
-import DragAndDrop from '@ingredients/DragAndDrop';
+import { Heading, Box } from '@chakra-ui/react';
+import DragAndDropHTML from '@ingredients/DragAndDropHTML';
+import DragAndDropReact from '@ingredients/DragAndDropReact';
 
+<Heading as="h2" fontSize={28} marginBottom={8}>HTML Drag & Drop API</Heading>
 
-<DragAndDrop menuItems={[
+<Box marginBottom={10}>
+
+<DragAndDropHTML menuItems={[
   {
     name: 'Fried Chicken',
     id: 'fried-chicken'
@@ -20,3 +25,34 @@ import DragAndDrop from '@ingredients/DragAndDrop';
     id: 'ice-cream',
   }
 ]} />
+
+</Box>
+
+<Heading as="h2" fontSize={28} marginBottom={8}>React Beautiful DnD</Heading>
+
+<Box>
+
+<DragAndDropReact menuItems={[
+  {
+    id: 'sweet-potatoes',
+    name: 'Sweet Potatoes'
+  },
+  {
+    id: 'corn-cob',
+    name: 'Corn on the Cob'
+  },
+  {
+    id: 'green-beans',
+    name: 'Green Beans'
+  },
+  {
+    id: 'baked-beans',
+    name: 'Baked Beans'
+  },
+  {
+    id: 'coleslaw',
+    name: 'Coleslaw'
+  }
+]} />
+
+</Box>

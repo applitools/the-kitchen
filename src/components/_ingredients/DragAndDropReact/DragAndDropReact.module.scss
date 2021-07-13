@@ -1,0 +1,19 @@
+@import "@styles/settings/__settings";
+
+.menuItems {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menuItems li {
+  display: flex;
+  align-items: center;
+  border: solid 5px $color-gray-200;
+  border-radius: .2em;
+  padding: .8em 1em;
+  margin-bottom: 1em;
+}
+
+.actions {
+  margin-top: 2em;
+}
