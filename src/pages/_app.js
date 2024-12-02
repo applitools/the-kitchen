@@ -1,5 +1,6 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { CookiesProvider } from 'react-cookie';
+import { Analytics } from "@vercel/analytics/dist/react"
 
 import '@styles/globals.scss';
 
@@ -39,6 +40,7 @@ function MyApp({ Component, pageProps }) {
       <CookiesProvider>
         <Component {...pageProps} />
       </CookiesProvider>
+      <Analytics />
     </ChakraProvider>
   )
 }
